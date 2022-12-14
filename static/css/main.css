@@ -1,0 +1,592 @@
+/*--------------------------------------------------------------
+# Disable aos animation delay on mobile devices
+--------------------------------------------------------------*/
+@media screen and (max-width: 768px) {
+    [data-aos-delay] {
+      transition-delay: 0 !important;
+    }
+  }
+/* #4154f1
+*/
+/*
+* LOAD FONTS
+*/
+  @font-face {
+      font-family: "ppl";
+      src: url(../fonts/Poppins-Light.ttf);
+  }
+  @font-face {
+    font-family: "ppb";
+    src: url(../fonts/Poppins-Bold.ttf);
+}
+*{
+    padding: 0px;
+    margin: 0px;
+    font-family: "ppl";
+}
+b{
+  color: #fff;
+}
+red{
+  color: #cc1616;
+  font-family: "ppb";
+}
+.btn__blue{
+  background-color: #4154f1;
+  padding-inline: 15px;
+  font-family: "ppb";
+  color: white;
+
+}
+/*--------------------------------------------------------------
+# Top Bar
+--------------------------------------------------------------*/
+  #topbar {
+    height: 40px;
+    font-size: 14px;
+    transition: all 0.5s;
+    z-index: 996;
+  }
+  
+  #topbar.topbar-scrolled {
+    top: -40px;
+  }
+  
+  #topbar .contact-info i {
+
+    font-style: normal;
+    color: #cc1616;
+  }
+  #topbar .contact-info i:last-child{
+      margin-left: 15px;
+  }
+  
+  #topbar .contact-info i span {
+    padding-left: 5px;
+    color: #fff;
+  }
+/*--------------------------------------------------------------
+  # Header
+--------------------------------------------------------------*/
+  #header {
+    background: rgba(12, 11, 9, 0.6);
+    border-bottom: 1px solid rgba(12, 11, 9, 0.6);
+    transition: all 0.5s;
+    z-index: 997;
+    padding: 15px 0;
+    top: 40px;
+  }
+  
+  #header.header-scrolled {
+    top: 0;
+    background: rgba(0, 0, 0, 0.85);
+    border-bottom: 1px solid #37332a;
+  }
+  
+  #header .logo {
+    font-size: 28px;
+    margin: 0;
+    padding: 0;
+    line-height: 1;
+    font-weight: 300;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    font-family: "Poppins", sans-serif;
+  }
+  
+  #header .logo a {
+    color: #fff;
+  }
+  
+  #header .logo img {
+    max-height: 40px;
+  }
+  
+
+/*--------------------------------------------------------------
+# Navigation Menu
+--------------------------------------------------------------*/
+.navbar {
+padding: 0;
+}
+
+.navbar ul {
+margin: 0;
+padding: 0;
+display: flex;
+list-style: none;
+align-items: center;
+}
+
+.navbar li {
+position: relative;
+}
+.navbar a {
+   transition: all 0.3s;
+}
+.navbar a, .navbar a:focus {
+ 
+display: flex;
+align-items: center;
+justify-content: space-between;
+padding: 10px 0 10px 30px;
+color: #fff;
+white-space: nowrap;
+transition: 0.3s;
+font-size: 14px;
+}
+
+.navbar a i, .navbar a:focus i {
+font-size: 12px;
+line-height: 0;
+margin-left: 5px;
+}
+
+.navbar a:hover, .navbar .active, .navbar .active:focus, .navbar li:hover > a {
+  color: #4154f1;
+  font-family: "ppb";
+}
+/**
+* Mobile Navigation 
+*/
+.mobile-nav-toggle {
+color: #fff;
+font-size: 28px;
+cursor: pointer;
+display: none;
+line-height: 0;
+transition: 0.5s;
+}
+
+@media (max-width: 991px) {
+.mobile-nav-toggle {
+    display: block;
+}
+.navbar ul {
+    display: none;
+}
+}
+
+.navbar-mobile {
+position: fixed;
+overflow: hidden;
+top: 0;
+right: 0;
+left: 0;
+bottom: 0;
+background: rgba(0, 0, 0, 0.9);
+transition: 0.3s;
+z-index: 999;
+}
+
+.navbar-mobile .mobile-nav-toggle {
+position: absolute;
+top: 15px;
+right: 15px;
+}
+
+.navbar-mobile ul {
+display: block;
+position: absolute;
+top: 55px;
+right: 15px;
+bottom: 15px;
+left: 15px;
+padding: 10px 0;
+border-radius: 6px;
+background-color: #fff;
+overflow-y: auto;
+transition: 0.3s;
+}
+
+.navbar-mobile a {
+padding: 10px 20px;
+font-size: 15px;
+color: #1a1814;
+}
+
+.navbar-mobile a:hover, .navbar-mobile .active, .navbar-mobile li:hover > a {
+color: #cc1616;
+}
+
+.navbar-mobile .getstarted {
+margin: 15px;
+}
+/*--------------------------------------------------------------
+# Hero Section
+--------------------------------------------------------------*/
+#hero {
+width: 100%;
+height: 100vh;
+background: url("../images/bg.jpg") top center;
+background-size: cover;
+position: relative;
+padding: 0;
+}
+
+#hero:before {
+content: "";
+background: rgba(0, 0, 0, 0.5);
+position: absolute;
+bottom: 0;
+top: 0;
+left: 0;
+right: 0;
+}
+
+#hero .container {
+padding-top: 110px;
+}
+
+@media (max-width: 992px) {
+#hero .container {
+    padding-top: 98px;
+}
+}
+.hero__content{
+    display: flex;
+    justify-content: center;
+}
+#hero h1 {
+margin: 0;
+font-size: 48px;
+font-weight: 700;
+line-height: 56px;
+color: #fff;
+font-family: "ppb";
+margin-bottom: 5px;
+
+}
+
+#hero h1 span {
+  font-family: "ppb";
+  color: #cc1616;
+}
+
+#hero h2 {
+color: #eee;
+margin-bottom: 10px 0 0 0;
+font-size: 22px;
+}
+.getInTouchBtn{
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-top: 15px;
+}
+
+.get__in__touch{
+  background-color: #4154f1;
+  padding:15px;
+  color: #fff;
+  font-family: "ppb";
+
+}
+@media (min-width: 1024px) {
+#hero {
+    background-attachment: fixed;
+}
+}
+
+@media (max-height: 500px) {
+#hero {
+    height: auto;
+}
+#hero .container {
+    padding-top: 130px;
+    padding-bottom: 60px;
+}
+}
+
+@media (max-width: 768px) {
+#hero h1 {
+    font-size: 28px;
+    line-height: 36px;
+}
+#hero h2 {
+    font-size: 18px;
+    line-height: 24px;
+}
+}
+
+/*
+* INTRO SECTION
+*/
+.sec__header{
+  height: 20vh;
+  width: 100%;
+}
+.sec__body{
+  margin-bottom: 25px;
+}
+
+.sec__header .header__content{
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  
+}
+.sec__header .head h1{
+  font-family: "ppb";
+  color: #010102;
+}
+.sec__header .header__content .head h1::before,
+.sec__header .header__content .head h1::after
+{
+  content: "";
+  width: 60px;
+  height: 2.5px;
+  display: inline-block;
+  background: #020a4e;
+  margin: 4px 10px;
+  margin-bottom: 10px;
+}
+.intro__content{
+  margin-top: 15px;
+  display: flex;
+  flex-direction: row;
+}
+.intro__content .infor h5{
+  font-family: "ppb";
+  text-align: center;
+}
+.intro__content .infor,
+.intro__content .showcase
+{
+  width: 50%;
+}
+.intro__content .infor ul {
+
+  list-style-type: none;
+  margin-left: 30px;
+}
+.intro__content .infor ul li span {
+  color: #948d01;
+}
+.intro__content .infor ul li{
+  font-family: "ppb";
+  color: #37332a;
+}
+.intro__content .showcase img::before{
+  content: "";
+  background: rgba(0, 0, 0, 0.5);
+  position: absolute;
+  bottom: 0;
+  top: 0;
+  left: 0;
+  right: 0;
+}
+/* SERVICES SECTION */
+.services .icon-box {
+  text-align: center;
+  padding: 80px 20px;
+  transition: all ease-in-out 0.3s;
+  box-shadow: 0px 2px 15px rgba(0, 0, 0, 0.1);
+}
+
+.services .icon-box .icon {
+  margin: 0 auto;
+  width: 64px;
+  height: 64px;
+  background: #cc1616;
+  transition: all .3s ease-out 0s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 20px;
+  transform-style: preserve-3d;
+}
+
+.services .icon-box .icon i {
+  color: #fff;
+  font-size: 28px;
+}
+
+.services .icon-box .icon::before {
+  position: absolute;
+  content: '';
+  left: -8px;
+  top: -8px;
+  height: 100%;
+  width: 100%;
+  background: #fce5e5;
+  transition: all .3s ease-out 0s;
+  transform: translateZ(-1px);
+}
+
+.services .icon-box h4 {
+  font-weight: 700;
+  margin-bottom: 15px;
+  font-size: 24px;
+}
+
+.services .icon-box h4 a {
+  color: #191919;
+}
+
+.services .icon-box p {
+  line-height: 24px;
+  font-size: 14px;
+  margin-bottom: 0;
+}
+
+.services .icon-box:hover {
+  background: #cc1616;
+  border-color: #cc1616;
+  padding: 70px 20px 90px 20px;
+}
+
+.services .icon-box:hover .icon {
+  background: #fff;
+}
+
+.services .icon-box:hover .icon i {
+  color: #cc1616;
+}
+
+.services .icon-box:hover .icon::before {
+  background: #e82d2d;
+}
+
+.services .icon-box:hover h4 a, .services .icon-box:hover p {
+  color: #fff;
+}
+/* CAR BRANDS SECTION */
+.owl-carousel .owl-nav button.owl-next,
+.owl-carousel .owl-nav button.owl-prev{
+    margin-top: 15px;
+    width: 50px;
+    margin-left: 15px;
+    border: 2px solid #cc1616;
+    background-color: #cc1616;
+    color: #fff;
+    font-size: 2rem;
+    border-radius: 15px;
+    transition: all 0.3s;
+    outline: none;
+}
+.owl-carousel .owl-nav button.owl-next:hover,
+.owl-carousel .owl-nav button.owl-prev:hover{
+    border: 2px solid #cc1616;
+    background-color: #fff;
+    color: #cc1616;
+}
+/*CAR PARTS*/
+#our__parts .item{
+  border-radius: 25px;
+}
+.part__name{
+  background-color: #cc1616;
+  padding: 10px 0 10px 0;
+  color: #fff;
+  text-align: center;
+  margin-bottom: 20px;
+}
+/* CONTACT US*/
+.sec__body .info-box {
+  color: #444444;
+  background: #fafbff;
+  padding: 30px;
+  margin-bottom: 30px;
+}
+
+.sec__body .info-box i {
+  font-size: 38px;
+  line-height: 0;
+  color: #4154f1;
+}
+
+.sec__body .info-box h3 {
+  font-size: 20px;
+  color: #012970;
+  font-weight: 700;
+  margin: 20px 0 10px 0;
+}
+
+.sec__body .info-box p {
+  padding: 0;
+  line-height: 24px;
+  font-size: 14px;
+  margin-bottom: 0;
+}
+/* FOOTER */
+#footer{
+  height: fit-content;
+  background-color: #080811;
+  color: white;
+  padding-top: 30px;
+  font-size: 1rem;
+}
+.footer__row{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  font-size: 0.9rem;
+  
+}
+.footer__row .footer__col{
+  width: 50%;
+}
+.footer__col  ul{
+  list-style-type: none;
+}
+.footer__col  ul a li{
+  margin-bottom: 5px;
+}
+.footer__col a {
+  text-decoration: none;
+  color: white;
+}
+#footer h2{
+  font-family: "ppb";
+  font-size: 1.3rem;
+  color: #4154f1;
+  padding-bottom: 15px;
+}
+.col__two{
+  margin-left: 25px;
+}
+#footer .bi.bi-chevron-right{
+
+    color: #030361;
+}
+.footer__socials .bi{
+  color: #4154f1;
+  font-size: 1.3rem;
+  padding-left: 5px;
+}
+.footer__socials .bi:first-child{
+  padding-left: unset;
+}
+@media (max-width:774px) {
+  .footer__row{
+    margin-top: 15px;
+  }
+  .col__two{
+    margin-left: unset;
+  }
+}
+@media(max-width:480px){
+
+  .footer__row{
+    flex-direction: column;
+  }
+  .footer__row .footer__col{
+    width: 100%;
+  }
+
+}
+.credits{
+  border-top: 2.5px solid #4154f1;
+  height: fit-content;
+  background: #0d0d2056;
+  text-align: center;
+  padding:15px 0px 15px 0px ;
+}
+.credits h6 a {
+  text-decoration: none;
+  font-family: "ppb";
+}
